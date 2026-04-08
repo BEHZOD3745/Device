@@ -71,7 +71,7 @@ function createQuantityRow(type, pinKey, pinLabel, vehicleKey, vehicleLabel) {
 
 function createCardMarkup(type, pin) {
   const isBundle = type === "bundle";
-  const title = isBundle ? `${pin.label} Device + Cable` : `${pin.label} Cable`;
+  const title = isBundle ? `${pin.label} Cable  + Device ` : `${pin.label} Cable`;
   const description = isBundle
     ? `Price per unit: $${BUNDLE_PRICE}`
     : `Price per unit: $${CABLE_PRICE}`;
