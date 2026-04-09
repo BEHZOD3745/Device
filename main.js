@@ -194,7 +194,7 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  const savedTheme = localStorage.getItem("site-theme") || "dark";
+  const savedTheme = localStorage.getItem("site-theme") || "light";
   applyTheme(savedTheme);
 }
 
