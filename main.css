@@ -536,6 +536,7 @@ img {
     border: 1.5px solid var(--blue-main);
     background: #486af1;
     box-shadow: 0 12px 24px rgba(72, 106, 241, 0.28);
+    color: #ffffff !important;
 }
 
 .button--primary:hover {
@@ -550,6 +551,7 @@ img {
 }
 
 .button--secondary:hover {
+    color: #ffffff !important;
     border: 1.5px solid #1d4cff;
     background: var(--button-gradient-hover);
 }
