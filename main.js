@@ -76,7 +76,7 @@ function createCardMarkup(type, pin) {
     ? `Price per unit: $${BUNDLE_PRICE}`
     : `Price per unit: $${CABLE_PRICE}`;
   const imageSrc = isBundle ? pin.bundleImage : pin.cableImage;
-  const imageAlt = isBundle ? `${pin.label} device and cable` : `${pin.label} cable`;
+  const imageAlt = isBundle ? `${pin.label} cable and device` : `${pin.label} cable`;
 
   const rows = VEHICLE_TYPES.map((vehicle) =>
     createQuantityRow(type, pin.key, pin.label, vehicle.key, vehicle.label)
@@ -218,7 +218,7 @@ Full Name: ${fullName}
 
 USDOT: ${usdot}
 
-Order Type: ${mode === "device-cable" ? "Device + Cable" : "Cable only"}
+Order Type: ${mode === "device-cable" ? " Device + Cable" : "Cable only"}
 
 ${buildItemsBlock(title, items)}
 
