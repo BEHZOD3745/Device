@@ -181,6 +181,30 @@ function buildItemsBlock(title, items) {
   return `${title}:\n${lines}`;
 }
 
+const themeToggle = document.getElementById("themeToggle");
+const page = document.body;
+
+function applyTheme(theme) {
+  const isLight = theme === "light";
+
+  page.classList.toggle("page--light", isLight);
+  themeToggle.textContent = isLight ? "Dark mode" : "Light mode";
+
+  localStorage.setItem("site-theme", theme);
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem("site-theme") || "dark";
+  applyTheme(savedTheme);
+}
+
+themeToggle.addEventListener("click", () => {
+  const isLight = page.classList.contains("page--light");
+  applyTheme(isLight ? "dark" : "light");
+});
+
+initTheme();
+
 function buildTelegramText() {
   const companyName = document.getElementById("companyName").value.trim();
   const address = document.getElementById("address").value.trim();

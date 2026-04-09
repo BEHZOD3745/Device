@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,23 +8,26 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="main.css" />
 </head>
+
 <body class="page">
   <main class="page__main">
     <section class="order-panel" aria-labelledby="order-title">
       <header class="order-panel__header">
-        <img src="images/logo1.svg" alt="">
-        <!-- <p class="order-panel__eyebrow">ORDER PORTAL</p> -->
-        <h1 class="order-panel__title" id="order-title">Device Order Form</h1>
-        <p class="order-panel__subtitle">
-          Complete the form below to place a device or cable order.
-        </p>
+        <div class="order-panel__header-main">
+          <p class="order-panel__eyebrow">ORDER PORTAL</p>
+          <h1 class="order-panel__title" id="order-title">Device Order Form</h1>
+          <p class="order-panel__subtitle">
+            Complete the form below to place a device or cable order.
+          </p>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+          Light mode
+        </button>
       </header>
 
       <form class="order-form" id="orderForm">
@@ -35,60 +39,32 @@
           <div class="order-form__grid order-form__grid--2">
             <div class="order-form__field">
               <label class="order-form__label" for="companyName">Company name</label>
-              <input
-                class="order-form__input"
-                type="text"
-                id="companyName"
-                placeholder="Enter company name"
-                required
-              />
+              <input class="order-form__input" type="text" id="companyName" placeholder="Enter company name" required />
             </div>
 
             <div class="order-form__field">
               <label class="order-form__label" for="fullName">Full name</label>
-              <input
-                class="order-form__input"
-                type="text"
-                id="fullName"
-                placeholder="Enter full name"
-                required
-              />
+              <input class="order-form__input" type="text" id="fullName" placeholder="Enter full name" required />
             </div>
           </div>
 
           <div class="order-form__grid order-form__grid--2">
             <div class="order-form__field">
               <label class="order-form__label" for="address">Address for ship</label>
-              <textarea
-                class="order-form__input order-form__input--textarea"
-                id="address"
-                placeholder="Enter shipping address"
-                required
-              ></textarea>
+              <textarea class="order-form__input order-form__input--textarea" id="address"
+                placeholder="Enter shipping address" required></textarea>
             </div>
 
             <div class="order-form__field">
               <label class="order-form__label" for="phone">Phone number</label>
-              <input
-                class="order-form__input"
-                type="text"
-                id="phone"
-                placeholder="Enter phone number"
-                required
-              />
+              <input class="order-form__input" type="text" id="phone" placeholder="Enter phone number" required />
             </div>
           </div>
 
           <div class="order-form__grid order-form__grid--2">
             <div class="order-form__field">
               <label class="order-form__label" for="usdot">USDOT</label>
-              <input
-                class="order-form__input"
-                type="text"
-                id="usdot"
-                placeholder="Enter USDOT number"
-                required
-              />
+              <input class="order-form__input" type="text" id="usdot" placeholder="Enter USDOT number" required />
             </div>
           </div>
         </section>
@@ -98,13 +74,7 @@
 
           <div class="mode-switch" role="radiogroup" aria-labelledby="order-type-title">
             <label class="mode-switch__option">
-              <input
-                class="mode-switch__input"
-                type="radio"
-                name="orderMode"
-                value="device-cable"
-                checked
-              />
+              <input class="mode-switch__input" type="radio" name="orderMode" value="device-cable" checked />
               <span class="mode-switch__card">
                 <span class="mode-switch__title">Device + Cable</span>
                 <span class="mode-switch__text">Price per unit: $200</span>
@@ -112,12 +82,7 @@
             </label>
 
             <label class="mode-switch__option">
-              <input
-                class="mode-switch__input"
-                type="radio"
-                name="orderMode"
-                value="cable-only"
-              />
+              <input class="mode-switch__input" type="radio" name="orderMode" value="cable-only" />
               <span class="mode-switch__card">
                 <span class="mode-switch__title">Cable only</span>
                 <span class="mode-switch__text">Price per unit: $50</span>
@@ -162,13 +127,7 @@
 
           <div class="shipping-grid" role="radiogroup" aria-labelledby="shipping-title">
             <label class="shipping-card">
-              <input
-                class="shipping-card__input"
-                type="radio"
-                name="shippingType"
-                value="Standard"
-                checked
-              />
+              <input class="shipping-card__input" type="radio" name="shippingType" value="Standard" checked />
               <span class="shipping-card__content">
                 <span class="shipping-card__title">Standard</span>
                 <span class="shipping-card__price">$40</span>
@@ -177,12 +136,7 @@
             </label>
 
             <label class="shipping-card">
-              <input
-                class="shipping-card__input"
-                type="radio"
-                name="shippingType"
-                value="Medium"
-              />
+              <input class="shipping-card__input" type="radio" name="shippingType" value="Medium" />
               <span class="shipping-card__content">
                 <span class="shipping-card__title">Medium</span>
                 <span class="shipping-card__price">$50</span>
@@ -191,12 +145,7 @@
             </label>
 
             <label class="shipping-card">
-              <input
-                class="shipping-card__input"
-                type="radio"
-                name="shippingType"
-                value="Overnight"
-              />
+              <input class="shipping-card__input" type="radio" name="shippingType" value="Overnight" />
               <span class="shipping-card__content">
                 <span class="shipping-card__title">Overnight</span>
                 <span class="shipping-card__price">$70</span>
@@ -224,4 +173,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
